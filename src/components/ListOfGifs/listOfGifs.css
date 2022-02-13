@@ -5,6 +5,10 @@
 }
 
 .listOfGifs {
+  min-height: 100vh;
+}
+
+.listOfGifs h3{
   padding-top: 30px;
 }
 
@@ -25,6 +29,7 @@
   grid-auto-flow: row dense;
   gap: var(--gridList-gap, 6px);
 }
+
 
 @media screen and (min-width: 37.5rem) {
   :root {

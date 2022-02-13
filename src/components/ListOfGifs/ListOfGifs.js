@@ -8,16 +8,15 @@ const ListOfGifs = ({ gifs, keyword }) => {
     <div className="listOfGifs">
       {keyword && (
         <>
-          {" "}
-          <h3>{keyword}'s gifs</h3>
+          <h3>{decodeURI(keyword)}'s gifs</h3>
           <Link to="/" className="goHomeLink">
             Go Home
           </Link>
         </>
       )}
       <div className="gifs-conteiner">
-        {gifs.map((gif) => (
-          <Gif key={gif.id} gif={gif} />
+        {gifs && gifs.map((gif, indx) => (
+          <Gif key={gif.id + indx} gif={gif} />
         ))}
       </div>
     </div>

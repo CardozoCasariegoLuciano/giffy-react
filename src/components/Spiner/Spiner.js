@@ -4,7 +4,9 @@ import "./spiner.css"
 const Spiner = () =>{
 
 return( 
-<div className="lds-dual-ring"></div>
+  <div className="spiner_conteiner">
+    <div className="lds-dual-ring"></div>
+  </div>
  )
 }
 

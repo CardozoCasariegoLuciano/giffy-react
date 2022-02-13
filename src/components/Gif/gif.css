@@ -1,22 +1,9 @@
-/*.gif{*/
-  /*width: 200px;*/
-  /*display: flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
-  /*align-self: center;*/
-  /*justify-self: center;*/
-/*}*/
-
-/*.gif img{*/
-  /*width: 100%;*/
-/*}*/
-
-
 .Gif {
   margin-bottom: 0;
 }
 
 .Gif-link {
+  display: block;
   position: relative;
   width: 100%;
   height: 100%;

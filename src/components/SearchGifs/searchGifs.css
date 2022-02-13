@@ -1,6 +1,17 @@
-.spiner_conteiner{
-  display:flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+
+.SearchGifs{
+  display: flex;
+  flex-direction: column;
+}
+
+.BTN_nxtPage{
+  background-color: lightblue;
+  width: 300px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 50px 0px;
+  justify-self:center;
+  align-self:center;
 }
