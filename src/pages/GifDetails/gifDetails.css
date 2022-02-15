@@ -17,3 +17,7 @@
   text-decoration: none;
   cursor:pointer;
 }
+
+.gifDetails_link:hover{
+  text-decoration: underline;
+}
