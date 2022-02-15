@@ -6,6 +6,7 @@ import Spiner from "../../components/Spiner/Spiner";
 import TrendingSearches from "../../components/TrendingSearches/TrendingSearches";
 import { useGifs } from "../../hooks/useGifs";
 import "./home.css";
+import {Helmet} from "react-helmet"
 
 const Home = () => {
   const { isLoading, gifs } = useGifs();
@@ -18,6 +19,9 @@ const Home = () => {
 
   return (
     <div className="Home">
+      <Helmet>
+        <title>Home | Giffy</title>
+      </Helmet>
       <SearchForm onSubmit={handleSubmit} />
       <h2>Lastest gifs searched</h2>
       <div className="home_content">

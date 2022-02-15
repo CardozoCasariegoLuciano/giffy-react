@@ -11,7 +11,7 @@ export const useGifs = ({ keyword } = {}) => {
   const [isLoadingNextPage, setisloadingNextPage] = useState(false);
 
   const keywordToUse =
-    keyword || localStorage.getItem("lastkeyword") || "random"
+    keyword || localStorage.getItem("lastkeyword") || "random";
 
   useEffect(() => {
     setisloading(true);
@@ -32,5 +32,5 @@ export const useGifs = ({ keyword } = {}) => {
     });
   }, [page, keywordToUse]);
 
-  return { isLoading,  isLoadingNextPage , gifs, setPage };
+  return { isLoading, isLoadingNextPage, gifs, setPage };
 };

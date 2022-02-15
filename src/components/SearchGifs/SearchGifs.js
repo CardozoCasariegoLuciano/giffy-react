@@ -5,6 +5,7 @@ import Spiner from "../Spiner/Spiner";
 import debounce from "just-debounce-it";
 import "./searchGifs.css";
 import { useNearScreen } from "../../hooks/useNearScreen";
+import { Helmet } from "react-helmet";
 
 const SearchGifs = ({ params }) => {
   const ref = useRef();
@@ -30,8 +31,17 @@ const SearchGifs = ({ params }) => {
     if (isNearScreen) debounceHandleNextPage();
   }, [debounceHandleNextPage, isNearScreen]);
 
+  const title = gifs
+    ? `${gifs.length} resultados de ${decodeURI(keyword)}`
+    : ``;
+
   return (
     <div className="SearchGifs">
+      <Helmet>
+        <title>{title} </title>
+        <meta name="description" content={title}></meta>
+      </Helmet>
+
       {isLoading ? (
         <Spiner />
       ) : (
