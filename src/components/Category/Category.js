@@ -8,7 +8,7 @@ const Category = ({ title, options = [] }) => {
       <h4>{title}</h4>
       <div className="Category_links">
         {options.map((value, index) => (
-          <Link className="Category_link" key={index} to={`/search/${value}`}>
+          <Link className="Category_link" key={index} to={`/search/${value}/g`}>
             {value}
           </Link>
         ))}

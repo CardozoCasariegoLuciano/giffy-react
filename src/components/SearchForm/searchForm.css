@@ -1,12 +1,19 @@
 .SearchForm {
   margin: 40px 0px;
+  align-self: center;
 }
 
-.SearchForm input, .SearchForm button{
+.SearchForm form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchForm input, .SearchForm button, .ratingSelect{
   border: none;
   height: 2rem;
   outline:none;
-  font-size:1.0rem;
+  font-size:1rem;
 }
 
 .SearchForm input{
@@ -20,3 +27,13 @@
   background-color: lightblue;
   cursor: pointer;
 }
+
+.ratingSelect{
+  margin-left: 15px;
+  width: 75px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: lightblue;
+  cursor: pointer;
+}
+

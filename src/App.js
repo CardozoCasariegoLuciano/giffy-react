@@ -10,7 +10,7 @@ function App() {
     <GifContextProvider>
       <div className="App">
         <Route path="/" component={Home} />
-        <Route path="/search/:keyword" component={SearchGifs} />
+        <Route path="/search/:keyword/:rating?" component={SearchGifs} />
         <Route path="/gif/:id" component={GifDetails} />
         <Route path="/404" component={() => <h1>Erorr 404</h1>} />
       </div>

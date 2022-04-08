@@ -6,11 +6,12 @@ import debounce from "just-debounce-it";
 import "./searchGifs.css";
 import { useNearScreen } from "../../hooks/useNearScreen";
 import { Helmet } from "react-helmet";
+import SearchForm from "../SearchForm/SearchForm";
 
 const SearchGifs = ({ params }) => {
   const ref = useRef();
-  const { keyword } = params;
-  const { isLoading, gifs, setPage } = useGifs({ keyword });
+  const { keyword, rating} = params;
+  const { isLoading, gifs, setPage } = useGifs({ keyword, rating });
 
   const { isNearScreen } = useNearScreen({
     distance: "200px",
@@ -37,6 +38,7 @@ const SearchGifs = ({ params }) => {
 
   return (
     <div className="SearchGifs">
+      <SearchForm initialKeyword={keyword} initialRating={rating}/>
       <Helmet>
         <title>{title} </title>
         <meta name="description" content={title}></meta>
